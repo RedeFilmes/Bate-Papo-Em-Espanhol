@@ -1,0 +1,90 @@
+.chat-container {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    position: relative;
+}
+
+.chat-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.chat-content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    backdrop-filter: blur(5px);
+}
+
+.message-container {
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+}
+
+.avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.avatar-image {
+    border-radius: 50%;
+    overflow: hidden;
+    animation: pulse 2s infinite;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-speaking {
+    animation: speaking 1s infinite;
+}
+
+.voice-button {
+    transition: all 0.3s ease;
+}
+
+.voice-button.recording {
+    background-color: #ef4444;
+    animation: pulse 1.5s infinite;
+}
+
+.message-bubble {
+    backdrop-filter: blur(8px);
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 2px solid #75aadb;
+}
+
+.avatar-section {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.input-section {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-top: 2px solid #75aadb;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes speaking {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+}

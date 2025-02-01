@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Spanish speaking avatar chat application">
+    <meta name="keywords" content="avatar, chat, spanish, learning, conversation">
+    <meta property="og:title" content="Spanish Avatar Chat">
+    <meta property="og:description" content="Interactive Spanish speaking avatar chat application">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Spanish Avatar Chat">
+    <meta name="twitter:description" content="Interactive Spanish speaking avatar chat application">
+    <title>Chat em Espanhol</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="utils/speechUtils.js"></script>
+    <script type="text/babel" src="components/Avatar.js"></script>
+    <script type="text/babel" src="components/ChatMessage.js"></script>
+    <script type="text/babel" src="components/ChatInput.js"></script>
+    <script type="text/babel" src="components/VoiceButton.js"></script>
+    <script type="text/babel" src="utils/chatAgent.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
